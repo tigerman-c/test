@@ -1,0 +1,31 @@
+{
+    "scripts": {
+        "startEs": "node testEs.js",
+        "startCjs": "node tt.js",
+        "test": "jest",
+        "testWatch": "jest --watchAll",
+        "testUse": "jest && node jest/use.js",
+        "execDecDemo": "cd decorator && babel demo.js -o demo_t.js && node demo_t.js",
+        "translateX": "cd js && babel xxx.js -o includes.js"
+    },
+    "dependencies": {
+        "@babel/core": "^7.17.9",
+        "@babel/plugin-transform-runtime": "^7.17.0",
+        "@babel/preset-env": "^7.16.11",
+        "@babel/preset-typescript": "^7.16.7",
+        "@babel/runtime": "^7.17.9",
+        "@types/jest": "^27.4.0",
+        "axios": "^0.26.1",
+        "core-js": "3",
+        "jest": "^27.5.0",
+        "koa": "^2.13.4",
+        "typescript": "^4.6.2"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.17.6",
+        "@babel/plugin-proposal-decorators": "^7.17.9"
+    },
+    "browserslist": [
+        "Android <= 4.4.0"
+    ]
+}

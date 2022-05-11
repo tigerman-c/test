@@ -8,4 +8,6 @@ function changeC(v) {
     c = v
 }
 
+
 export { p, changeP, c, changeC }
+export default 'xxx'

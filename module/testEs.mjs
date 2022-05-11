@@ -8,7 +8,7 @@ console.log('c', c)
 changeP(2)
 console.log('c', c)
 
-// node --experimental-modules testES.mjs
+// node --experimental-modules module/testES.mjs
 // p { a: 1 }
 // p { a: 2 }
 // c 1

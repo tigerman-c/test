@@ -3,12 +3,16 @@ const Koa = require('koa');
 const app = new Koa();
 
 app.use(async ctx => {
-    ctx.body = await new Promise((res) => {
-        setTimeout(() => {
-            res('Hello World')
-        }, 5000);
-    })
+    // console.log(ctx, 2314)
+    const reqPath = ctx.request.url
+    if (reqPath === '/redirect') {
+        ctx.status = 301
+        ctx.redirect('/')
+
+        // ctx.body = 'redirect home'
+    }
+    ctx.body = 'success'
 });
 
-console.log('http://172.17.61.11:3113/')
+console.log('http://172.17.32.19:3113/')
 app.listen(3113);

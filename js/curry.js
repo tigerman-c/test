@@ -5,6 +5,3 @@ curryPlus(1, 2, 3, 4) //返回10
 curryPlus(1, 2)(4)(3) //返回10
 curryPlus(1, 2)(3, 4) //返回10
 curryPlus(1)(2)(3)(4) //返回10
-
-
-

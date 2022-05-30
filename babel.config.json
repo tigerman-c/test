@@ -4,7 +4,10 @@
             "@babel/preset-env",
             {
                 "useBuiltIns": "usage",
-                "corejs": 3
+                "corejs": 3,
+                "targets":{
+                    "node": "current"
+                }
             }
         ]
         // "@babel/preset-typescript"
@@ -12,5 +15,10 @@
     "plugins": [
         "@babel/plugin-transform-runtime",
         ["@babel/plugin-proposal-decorators", { "legacy": true }]
-    ]
+    ],
+    "env": {
+        "test": {
+          "plugins": ["@babel/plugin-transform-modules-commonjs"]
+        }
+      }
 }

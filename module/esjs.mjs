@@ -7,7 +7,10 @@ function changeP(v) {
 function changeC(v) {
     c = v
 }
+function logPa() {
+    console.log(p.a++);
+}
 
 
-export { p, changeP, c, changeC }
+export { p, changeP, c, changeC, logPa }
 export default 'xxx'

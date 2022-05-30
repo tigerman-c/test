@@ -153,3 +153,41 @@ type passedObject11 = listenPassedObjectT<typeof passedObject>
 function ff<T>(params: T) {
     console.log(params.length)
 }
+
+interface IdLabel {
+    id: number /* some fields */;
+}
+interface NameLabel {
+    name: string /* other fields */;
+}
+type NameOrId<T extends number | string> = T extends number
+    ? IdLabel
+    : NameLabel;
+
+function _createLabel<T extends string | number>(
+    idOrName: T
+): NameOrId<T> {
+    if (typeof idOrName === 'number') {
+        return { id: 1 } as NameOrId<T>
+    } else if (typeof idOrName === 'string') {
+        return { name: '1' } as NameOrId<T>
+    }
+}
+
+_createLabel(123)
+
+let obj: {
+    a: string,
+    b: number
+} = {
+    a: '11',
+    b: 1
+}
+
+let o1: {
+    a?: string,
+    b: number
+} = {
+    b: 1
+}
+obj = o1

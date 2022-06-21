@@ -1,5 +1,5 @@
-const arr = [1]
-const fn = () => { }
-const res = arr.includes(1)
-console.log(res)
-console.log(fn)
+function fn() {
+    outer: { let i = 0; while (i < 10) { console.log(i); if (i === 5) { break outer }; i++ } }
+}
+
+fn()

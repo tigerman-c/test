@@ -17,6 +17,7 @@
         "@babel/runtime": "^7.17.9",
         "@types/jest": "27.4.1",
         "axios": "^0.26.1",
+        "benchmark": "^2.1.4",
         "core-js": "3",
         "jest": "^27.5.0",
         "jest-location-mock": "1.0.9",

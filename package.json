@@ -6,7 +6,8 @@
         "testWatch": "jest --watchAll",
         "testUse": "jest && node jest/use.js",
         "execDecDemo": "cd decorator && babel demo.js -o demo_t.js && node demo_t.js",
-        "translateX": "cd js & babel xxx.js -o lib/includes.js"
+        "translateX": "cd js & babel xxx.js -o lib/includes.js",
+        "execTs": "cd ts && tsc exec.ts && node exec.js"
     },
     "dependencies": {
         "@babel/core": "^7.17.9",

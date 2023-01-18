@@ -1,5 +1,24 @@
+<head>
+    <script>
+        function submit(v) {
+            console.log(v, 1234)
+        }
+        window.onload = () => {
+            const myform = document.querySelector('#myform')
+            document.querySelector('button').onclick = ()=>{
+                const formData = new FormData(myform)
+                console.log(formData,[...formData.keys()],formData.entries(),22)
+            }
+        }
+    </script>
+</head>
 <html>
-<script type="module" src="./js/mutationObserver.js">
-</script>
+<form onsubmit="return false" id="myform">
+    <input type="text" name="name">
+    <input type="text" name="age">
+
+    <button>submit11</button>
+</form>
+
 
 </html>

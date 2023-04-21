@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>九宫格绘制</title>
+</head>
+
+<style>
+  .nine {
+    width: 300px;
+    height: 300px;
+    display: grid;
+    place-content: center;
+    /* place-items: center; */
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .box {
+    display: grid;
+    place-content: center;
+    border: 1px solid #000;
+    
+    width: 50px;
+    height: 50px;
+  }
+  .box:nth-child(2),.box:nth-child(3) {
+    margin-left: -1px;
+  }
+  .box:nth-child(4),.box:nth-child(7) {
+    margin-top: -1px;
+  }
+  .box:nth-child(5),.box:nth-child(6),.box:nth-child(8),.box:nth-child(9) {
+    margin-top: -1px;
+    margin-left: -1px;
+  }
+  .box:hover {
+    --curColor: red;
+    color: var(--curColor);
+    border-color: var(--curColor);
+    z-index: 9;
+  }
+</style>
+
+<body>
+  <!-- 
+    1. 边框九宫格的每个格子中的数字都要居中
+    2. 鼠标经过时边框和数字都要变红
+    3. 点击九宫格会弹出对应的数字 
+  -->
+  <div class="nine">
+    <span class="box">1</span>
+    <span class="box">2</span>
+    <span class="box">3</span>
+    <span class="box">4</span>
+    <span class="box">5</span>
+    <span class="box">6</span>
+    <span class="box">7</span>
+    <span class="box">8</span>
+    <span class="box">9</span>
+  </div>
+</body>
+
+</html>

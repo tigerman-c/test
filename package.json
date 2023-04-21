@@ -20,6 +20,7 @@
         "axios": "^0.26.1",
         "benchmark": "^2.1.4",
         "core-js": "3",
+        "eslint": "^8.33.0",
         "jest": "^27.5.0",
         "jest-location-mock": "1.0.9",
         "koa": "^2.13.4",
